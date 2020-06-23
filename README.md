@@ -8,4 +8,5 @@ This project will contain the following elements
 3) Current analysis using rafos/sofar floats
 4) Argo float analysis
 5) Time series of acoustic backscatter crossing the davis strait
-6) Modelling
+6) Biological sampling
+7) Modelling
