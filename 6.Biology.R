@@ -56,7 +56,11 @@ colnames(baffin_sub)[9] <- "lon"
 baffin_myc <- baffin_sub %>% filter(`Fish family` == "Myctophidae" & Station != "228")
 
 
-ggplot(baffin_myc, aes(x=`Standard length (mm)`)) + geom_histogram(binwidth = 5) + xlim(20, 100) + theme_bw()
+ggplot(baffin_myc, aes(x=`Standard length (mm)`)) + 
+  geom_histogram(binwidth = 2.5, fill="lightsteelblue2", color="slategray4") + 
+  geom_vline(aes(xintercept = mean(`Standard length (mm)`)),col='red', linetype="dashed",size=1) + 
+  xlim(15,90) +
+  theme_bw()
 
 colnames(all.sites)[1] <- "station"
 all.site <- Baffin_fish %>% bind_rows(., all.sites)
